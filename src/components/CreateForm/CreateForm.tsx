@@ -41,7 +41,7 @@ function CreateForm() {
   let linkNameCountForm = linkNameCount - state.linkName.length;
   let linkCountForm = linkCount - state.link.length;
 
-  const setErrorDescriptor = (e: any) => {
+  const setErrorDescriptor = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (descriptorCountForm === 0) {
       setErrorDescriptorCount(true);
       state.setDescriptor(e.target.value, descriptorCount);
@@ -50,7 +50,7 @@ function CreateForm() {
       state.setDescriptor(e.target.value, descriptorCount);
     }
   };
-  const setErrorTitle = (e: any) => {
+  const setErrorTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (titleCountForm === 0) {
       setErrorTitleCount(true);
       state.setTitle(e.target.value, titleCount);
@@ -59,7 +59,7 @@ function CreateForm() {
       state.setTitle(e.target.value, titleCount);
     }
   };
-  const setErrorLinkName = (e: any) => {
+  const setErrorLinkName = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (linkNameCountForm === 0) {
       setErrorLinkNameCount(true);
       state.setLinkName(e.target.value, linkNameCount);
@@ -68,7 +68,7 @@ function CreateForm() {
       state.setLinkName(e.target.value, linkNameCount);
     }
   };
-  const setErrorLink = (e: any) => {
+  const setErrorLink = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (linkCountForm === 0) {
       setErrorLinkCount(true);
       state.setLink(e.target.value, linkCount);

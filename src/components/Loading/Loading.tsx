@@ -22,7 +22,7 @@ function Loading() {
   const [imgError, setImgError] = useState(false);
   const [imgProgress, setImgProgress] = useState(0);
 
-  const onChange = (e: any) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files[0];
     setImgName(file.name);
     const minSize = 1241;
